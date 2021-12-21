@@ -11,10 +11,14 @@ public class PlayerData : ScriptableObject
 [System.Serializable]
 public class PlayerDataBase
 {
+    public string m_name;
     [SerializeField] Sprite m_image;
     [SerializeField] int m_life;
     [SerializeField] int m_power;
+    [SerializeField] float m_fireInterval;
     public Sprite Image => m_image;
     public int Life => m_life;
     public int Power => m_power;
+    public float FireInterval => m_fireInterval;
+    public float JumpPower { get; } = 10;
 }
