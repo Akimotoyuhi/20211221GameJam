@@ -13,8 +13,9 @@ public class PickManager : MonoBehaviour
 
     void Start()
     {
-        _texts[0].text =
+        TextMethod(_firstObj);
     }
+
 
     void TextMethod(GameObject obj)
     {

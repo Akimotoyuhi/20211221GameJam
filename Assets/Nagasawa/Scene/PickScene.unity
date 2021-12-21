@@ -133,6 +133,7 @@ GameObject:
   - component: {fileID: 160285504}
   - component: {fileID: 160285503}
   - component: {fileID: 160285502}
+  - component: {fileID: 160285505}
   m_Layer: 5
   m_Name: HaradaRafaeruEijiButton
   m_TagString: Untagged
@@ -239,6 +240,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 160285500}
   m_CullTransparentMesh: 0
+--- !u!114 &160285505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160285500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aTK: 0
+  _sPD: 0
+  _hP: 0
+  _FlavorText: 
 --- !u!1 &178063018
 GameObject:
   m_ObjectHideFlags: 0
@@ -251,6 +268,7 @@ GameObject:
   - component: {fileID: 178063022}
   - component: {fileID: 178063021}
   - component: {fileID: 178063020}
+  - component: {fileID: 178063023}
   m_Layer: 5
   m_Name: SnowManButton
   m_TagString: Untagged
@@ -357,6 +375,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 178063018}
   m_CullTransparentMesh: 0
+--- !u!114 &178063023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178063018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aTK: 0
+  _sPD: 0
+  _hP: 0
+  _FlavorText: 
 --- !u!1 &203705500
 GameObject:
   m_ObjectHideFlags: 0
@@ -401,6 +435,7 @@ GameObject:
   - component: {fileID: 237385547}
   - component: {fileID: 237385546}
   - component: {fileID: 237385545}
+  - component: {fileID: 237385548}
   m_Layer: 5
   m_Name: ChristmasTreeButton
   m_TagString: Untagged
@@ -507,6 +542,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 237385543}
   m_CullTransparentMesh: 0
+--- !u!114 &237385548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237385543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aTK: 0
+  _sPD: 0
+  _hP: 0
+  _FlavorText: 
 --- !u!1 &252334481
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,7 +700,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 238, y: 309}
+  m_AnchoredPosition: {x: 238, y: 325}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &471394125
@@ -678,13 +729,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 7
     m_MaxSize: 72
-    m_Alignment: 3
+    m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'HP:'
+  m_Text: "\u3042\u3042\u3042\u3042\u3042\n\u3042\u3042\u3042\u3042\u3042"
 --- !u!222 &471394126
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -783,6 +834,7 @@ GameObject:
   - component: {fileID: 537372912}
   - component: {fileID: 537372911}
   - component: {fileID: 537372910}
+  - component: {fileID: 537372913}
   m_Layer: 5
   m_Name: ReinDeerButton
   m_TagString: Untagged
@@ -889,6 +941,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 537372908}
   m_CullTransparentMesh: 0
+--- !u!114 &537372913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537372908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aTK: 0
+  _sPD: 0
+  _hP: 0
+  _FlavorText: 
 --- !u!1 &1038565169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1154,6 +1222,7 @@ GameObject:
   - component: {fileID: 1524344682}
   - component: {fileID: 1524344681}
   - component: {fileID: 1524344680}
+  - component: {fileID: 1524344683}
   m_Layer: 5
   m_Name: ChildButton
   m_TagString: Untagged
@@ -1260,6 +1329,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1524344678}
   m_CullTransparentMesh: 0
+--- !u!114 &1524344683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524344678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aTK: 0
+  _sPD: 0
+  _hP: 0
+  _FlavorText: 
 --- !u!1 &2040793800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1338,6 +1423,7 @@ GameObject:
   - component: {fileID: 2044655333}
   - component: {fileID: 2044655332}
   - component: {fileID: 2044655331}
+  - component: {fileID: 2044655334}
   m_Layer: 5
   m_Name: SantaButton
   m_TagString: Untagged
@@ -1444,6 +1530,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044655329}
   m_CullTransparentMesh: 0
+--- !u!114 &2044655334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044655329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _aTK: 0
+  _sPD: 0
+  _hP: 0
+  _FlavorText: 
 --- !u!1 &2112098327
 GameObject:
   m_ObjectHideFlags: 0
