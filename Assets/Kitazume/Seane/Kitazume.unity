@@ -133,7 +133,7 @@ GameObject:
   - component: {fileID: 289933145}
   - component: {fileID: 289933144}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: YukigaFuru
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -217,7 +217,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   looping: 1
-  prewarm: 0
+  prewarm: 1
   playOnAwake: 1
   useUnscaledTime: 0
   autoRandomSeed: 1
@@ -830,14 +830,14 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 25
+    angle: 3.3223553
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
     donutRadius: 0.2
-    m_Position: {x: 0, y: 0, z: 0}
-    m_Rotation: {x: 0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Position: {x: -0.00000004627251, y: -0.0000000118722, z: 0.55609816}
+    m_Rotation: {x: 0.0000000071237745, y: -0.0000012073973, z: 0.0000012073973}
+    m_Scale: {x: 21.256649, y: 1, z: 0.9999981}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -914,9 +914,9 @@ ParticleSystem:
     m_TextureBilinearFiltering: 0
     randomDirectionAmount: 0
     sphericalDirectionAmount: 0
-    randomPositionAmount: 0
+    randomPositionAmount: 0.24
     radius:
-      value: 1
+      value: 0.29558817
       mode: 0
       spread: 0
       speed:
@@ -4867,13 +4867,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 289933143}
-  m_LocalRotation: {x: 0.026785297, y: -0.7065993, z: 0.7065993, w: -0.026785297}
-  m_LocalPosition: {x: -0.8, y: 18.08, z: 1.32}
+  m_LocalRotation: {x: -0.0017995907, y: -0.7071045, z: 0.7071045, w: 0.0017995907}
+  m_LocalPosition: {x: 1.03, y: 19.15, z: 1.32}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -274.34198, y: 90.00001, z: -90.00001}
+  m_LocalEulerAnglesHint: {x: -269.709, y: 89.99999, z: -90}
 --- !u!1001 &788903200
 PrefabInstance:
   m_ObjectHideFlags: 0
