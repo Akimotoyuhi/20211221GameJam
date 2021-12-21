@@ -11,12 +11,27 @@ public class GameManager : MonoBehaviour
     private bool m_isGame = false;
     public static GameManager Instance { get; private set; }
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     void Start()
     {
         Instantiate(m_playerPrefab).GetComponent<Player>().Setup(m_playerData.m_playerDataBases[m_playerId]);
     }
 
     void Update()
+    {
+
+    }
+
+    public void Score()
+    {
+
+    }
+
+    public void GameSpeedUp()
     {
 
     }

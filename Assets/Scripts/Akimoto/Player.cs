@@ -4,16 +4,14 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
     private int m_life = 0;
-    [SerializeField]
     private int m_power = 0;
-    
+
     void Start()
     {
 
     }
-    
+
     void Update()
     {
 
@@ -26,13 +24,18 @@ public class Player : MonoBehaviour
         m_power = data.Power;
     }
 
-    public void GetItem()
+    public void GetItem(int id)
     {
-        
+        switch (id)
+        {
+            case 0:
+                //アイテムID０の処理
+                break;
+            case 1:
+                //アイテムID１の処理
+                break;
+            default:
+                break;
+        }
     }
-
-    //private void OnCollisionEnter2D(Collision2D collision)
-    //{
-    //    Debug.Log("hit");
-    //}
 }
