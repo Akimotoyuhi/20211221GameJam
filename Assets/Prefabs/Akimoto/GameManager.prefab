@@ -47,4 +47,5 @@ MonoBehaviour:
   m_playerPrefab: {fileID: 3020835024223001747, guid: ae25e1eda1f1c9b4b8ff970a5e232047,
     type: 3}
   m_playerId: 0
-  m_gameSpeed: 0
+  m_defGameSpeed: 0
+  m_starTimeLimit: 0
