@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 
 public class Scenemanager : MonoBehaviour
@@ -18,7 +19,7 @@ public class Scenemanager : MonoBehaviour
         this.fadeImage.DOFade(endValue: 0f, duration: 1f);
         //ImageのColorは真っ黒に設定
     }
-    public void Fade(bool type)//呼び出す関数
+    public void Fade(bool type, string scene)//呼び出す関数
     {
         if (type)
         {
