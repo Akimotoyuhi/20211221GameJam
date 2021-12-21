@@ -2,17 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class Player : MonoBehaviour
 {
-    private bool m_isGame = false;
 
     void Start()
     {
-
+        
     }
-
+    
     void Update()
     {
-
+        
     }
 }
