@@ -9,6 +9,5 @@ public class Enemy_Test2 : MonoBehaviour
     {
         Enemy_Capsule gameObject = this.GetComponent<Enemy_Capsule>();
         float EnemyHp = gameObject.HP;
-        //float DamegeHp = gameObject.DamegePlayer;
     }
 }
