@@ -5,15 +5,13 @@ using UnityEngine;
 public class Enemy_Test : MonoBehaviour
 {
     [SerializeField]
-    float _hp = 10;//体力
+    float _hp = 10;//ブラックサンタの体力
     [SerializeField] 
-    string _snowTag;
+    string _snowTag;//雪のタグ
     [SerializeField]
-    float _DamegePlayer = 1;
+    float _HpPlayer = 10;//プレイヤーのHP
     [SerializeField]
-    string _PlayerTag;
-
-
+    string _PlayerTag;//プレイヤーのタグ
 
     public float HP
     {
@@ -27,20 +25,8 @@ public class Enemy_Test : MonoBehaviour
     {
         get
         {
-            return _DamegePlayer;
+            return _HpPlayer;
         }
-    }
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -55,16 +41,17 @@ public class Enemy_Test : MonoBehaviour
         if (_hp <= 0)
         {
             Destroy(gameObject);
-            Debug.Log("GameOver");
+            Debug.Log("ブラックサンタが消えた");
         }
         if (collision.gameObject.tag == _PlayerTag)
         {
             Debug.Log("Playerに当たった");
-            _DamegePlayer --;
+            _HpPlayer--;
+            if (_HpPlayer <= 0)
+            {
+                Destroy(collision.gameObject);
+                Debug.Log("Playerが消えた");
+            }
         }
-        
-        
     }
-
-
 }

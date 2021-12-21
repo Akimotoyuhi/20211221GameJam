@@ -10,11 +10,6 @@ public class Enemy_Test2 : MonoBehaviour
         Enemy_Test gameObject = this.GetComponent<Enemy_Test>();
         float EnemyHp = gameObject.HP;
         float DamegeHp = gameObject.DamegePlayer;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
         
     }
 }
