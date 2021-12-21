@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] int m_playerId = 0;
     [SerializeField] float m_gameSpeed = 0f;
     private bool m_isGame = false;
+    public float Speed => m_gameSpeed;
+    public int Id { set => m_playerId = value; }
     public static GameManager Instance { get; private set; }
 
     private void Awake()
