@@ -10,11 +10,12 @@ public class BackGround : MonoBehaviour
     private float repeatWidth;
     /// <summary>背景のスピード</summary>
     [SerializeField] float speed = 10;
+    private float leftBound = -15f;
 
     void Start()
     {
         startPos = transform.position;
-        repeatWidth = GetComponent<BoxCollider2D>().size.x/2;
+        repeatWidth = GetComponent<BoxCollider2D>().size.x*2;
     }
 
     /// <summary>背景の繰り返し</summary>
@@ -23,6 +24,10 @@ public class BackGround : MonoBehaviour
         if (transform.position.x < startPos.x - repeatWidth)
         {
             transform.position = startPos;
+        }
+        if (transform.position.x < leftBound && gameObject.CompareTag("Background"))
+        {
+            Destroy(gameObject);
         }
         transform.Translate(Vector2.left * speed * Time.deltaTime, Space.World);
     }
