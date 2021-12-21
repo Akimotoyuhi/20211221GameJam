@@ -10,9 +10,9 @@ public class Scenemanager : MonoBehaviour
 {
     [Header("イメージを貼り付ける")]
     [SerializeField]Image _fadeImage;
-    public void StartFadeOut()//フェードアウト関数
+    public void StartFadeOut(string scene)//フェードアウト関数
     {
-        this._fadeImage.DOFade(duration: 1f, endValue: 1f);
+        this._fadeImage.DOFade(duration: 1f, endValue: 1f).OnComplete(() => SceneManager.LoadScene(scene));
         //ImageのColorは透明に設定
     }
     public void StartFadeIn()//フェードイン関数
@@ -29,7 +29,7 @@ public class Scenemanager : MonoBehaviour
         }
         else
         {
-            this._fadeImage.DOFade(duration: 1f, endValue: 1f);
+            this._fadeImage.DOFade(duration: 1f, endValue: 1f).OnComplete(() => SceneManager.LoadScene(scene));
             //ImageのColorは透明に設定
         }
     }

@@ -10,6 +10,6 @@ public class StartScene : MonoBehaviour
     void Start()
     {
         _image.color = Color.black;
-        _sceneManager.StartFadeIn();
+        _sceneManager.Fade(true, null);
     }
 }
