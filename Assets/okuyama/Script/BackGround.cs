@@ -9,13 +9,14 @@ public class BackGround : MonoBehaviour
     /// <summary>背景幅</summary>
     private float repeatWidth;
     /// <summary>背景のスピード</summary>
-    [SerializeField] float speed = 10;
-    private float leftBound = -15f;
+    float speed;
+    float leftBound = -15f;
 
     void Start()
     {
         startPos = transform.position;
         repeatWidth = GetComponent<BoxCollider2D>().size.x*2;
+        speed = GameManager.Instance.Speed;
     }
 
     /// <summary>背景の繰り返し</summary>
