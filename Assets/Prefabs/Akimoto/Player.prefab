@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3020835024223001758}
   - component: {fileID: 3020835024223001759}
-  - component: {fileID: 3020835024223001744}
   - component: {fileID: 3020835024223001745}
   - component: {fileID: 3020835024223001746}
+  - component: {fileID: 3020835024223001744}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -84,20 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &3020835024223001744
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3020835024223001747}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4adf8df9050855c44a3a97e04e3c8ed0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_life: 0
-  m_power: 0
 --- !u!50 &3020835024223001745
 Rigidbody2D:
   serializedVersion: 4
@@ -118,7 +104,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!58 &3020835024223001746
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -135,3 +121,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!114 &3020835024223001744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3020835024223001747}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4adf8df9050855c44a3a97e04e3c8ed0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_snowBall: {fileID: 4535768266590397036, guid: ab26d9c758aadeb4aa3aa6c7fefd97e5,
+    type: 3}
