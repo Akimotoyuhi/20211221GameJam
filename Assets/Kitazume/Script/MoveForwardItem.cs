@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveForwardItem : MonoBehaviour
 {
     public float speed = 10;
-    public float Speed
+    public float Speed//アイテムの動く速さ
     {
         get
         {
