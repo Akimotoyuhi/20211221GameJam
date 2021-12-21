@@ -9,7 +9,7 @@ public class MoveForwardItem : MonoBehaviour
     {
         get
         {
-            return speed;
+            return speed;　//カプセル化
         }
     }
     
