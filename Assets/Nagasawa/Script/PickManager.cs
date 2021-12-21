@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System;
 
 public class PickManager : MonoBehaviour
 {
@@ -13,11 +14,25 @@ public class PickManager : MonoBehaviour
 
     void Start()
     {
-        TextMethod(_firstObj);
+        _selectObj = _firstObj;
+        TextMethod(_selectObj);
     }
 
+    //void Update()
+    //{
+    //    Select();
+    //    TextMethod(_selectObj);
+    //}
 
-    void TextMethod(GameObject obj)
+    //void Select()
+    //{
+    //    if (_eventSystem.currentSelectedGameObject)
+    //    {
+    //        _selectObj = _eventSystem.currentSelectedGameObject.gameObject;
+    //    }
+    //}
+
+    public void TextMethod(GameObject obj)
     {
         _texts[0].text = obj.GetComponent<State>().ATK.ToString();
         _texts[1].text = obj.GetComponent<State>().SPD.ToString();

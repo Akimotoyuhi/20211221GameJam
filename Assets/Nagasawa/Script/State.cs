@@ -31,7 +31,7 @@ public class State : MonoBehaviour
         }
     }
 
-    [SerializeField] string _flavorText;
+    [SerializeField, TextArea(1, 3)] string _flavorText;
     public string FlavorText
     {
         get

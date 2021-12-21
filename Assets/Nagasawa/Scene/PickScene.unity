@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 160285503}
   - component: {fileID: 160285502}
   - component: {fileID: 160285505}
+  - component: {fileID: 160285506}
   m_Layer: 5
   m_Name: HaradaRafaeruEijiButton
   m_TagString: Untagged
@@ -181,7 +182,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -252,10 +253,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _aTK: 0
-  _sPD: 0
-  _hP: 0
-  _FlavorText: 
+  _aTK: 1
+  _sPD: 1
+  _hP: 1
+  _flavorText: "\u539F\u7530\n\u30E9\u30D5\u30A1\u30A8\u30EB\n\u3048\u3044\u3058"
+--- !u!114 &160285506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 160285500}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 252334483}
+          m_MethodName: TextMethod
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 160285500}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &178063018
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +298,7 @@ GameObject:
   - component: {fileID: 178063021}
   - component: {fileID: 178063020}
   - component: {fileID: 178063023}
+  - component: {fileID: 178063024}
   m_Layer: 5
   m_Name: SnowManButton
   m_TagString: Untagged
@@ -316,7 +346,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -387,10 +417,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _aTK: 0
-  _sPD: 0
-  _hP: 0
-  _FlavorText: 
+  _aTK: 10
+  _sPD: 1
+  _hP: 1
+  _flavorText: "\u96EA\u3060\u308B\u307E\n\u30AA\u30E9\u30D5\n\u30D4\u30A8\u30FC\u30EB\u6EDD"
+--- !u!114 &178063024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 178063018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 252334483}
+          m_MethodName: TextMethod
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 178063018}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &203705500
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,6 +478,7 @@ Transform:
   m_Children:
   - {fileID: 2040793801}
   - {fileID: 252334482}
+  - {fileID: 1639881675}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -436,6 +495,7 @@ GameObject:
   - component: {fileID: 237385546}
   - component: {fileID: 237385545}
   - component: {fileID: 237385548}
+  - component: {fileID: 237385549}
   m_Layer: 5
   m_Name: ChristmasTreeButton
   m_TagString: Untagged
@@ -483,7 +543,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -554,10 +614,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _aTK: 0
-  _sPD: 0
-  _hP: 0
-  _FlavorText: 
+  _aTK: 2
+  _sPD: 10
+  _hP: 1
+  _flavorText: "\u30AF\u30EA\u30B9\u30DE\u30B9\u30C4\u30EA\u30FC\n\u6728\n\u68EE"
+--- !u!114 &237385549
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237385543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 252334483}
+          m_MethodName: TextMethod
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 237385543}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &252334481
 GameObject:
   m_ObjectHideFlags: 0
@@ -567,6 +655,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 252334482}
+  - component: {fileID: 252334483}
   m_Layer: 0
   m_Name: PickSystem
   m_TagString: Untagged
@@ -588,6 +677,25 @@ Transform:
   m_Father: {fileID: 203705501}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &252334483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252334481}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc1a3a297c61cca40a3f0edf036d3e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _eventSystem: {fileID: 2040793803}
+  _texts:
+  - {fileID: 513910895}
+  - {fileID: 394256111}
+  - {fileID: 2112098329}
+  - {fileID: 471394125}
+  _firstObj: {fileID: 2044655329}
 --- !u!1 &394256109
 GameObject:
   m_ObjectHideFlags: 0
@@ -835,6 +943,7 @@ GameObject:
   - component: {fileID: 537372911}
   - component: {fileID: 537372910}
   - component: {fileID: 537372913}
+  - component: {fileID: 537372914}
   m_Layer: 5
   m_Name: ReinDeerButton
   m_TagString: Untagged
@@ -882,7 +991,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -953,10 +1062,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _aTK: 0
-  _sPD: 0
-  _hP: 0
-  _FlavorText: 
+  _aTK: 3
+  _sPD: 7
+  _hP: 1
+  _flavorText: "\u30C8\u30CA\u30AB\u30A4\n\u9E7F\n\u6B6F\u79D1"
+--- !u!114 &537372914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 537372908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 252334483}
+          m_MethodName: TextMethod
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 537372908}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &1038565169
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,6 +1360,7 @@ GameObject:
   - component: {fileID: 1524344681}
   - component: {fileID: 1524344680}
   - component: {fileID: 1524344683}
+  - component: {fileID: 1524344684}
   m_Layer: 5
   m_Name: ChildButton
   m_TagString: Untagged
@@ -1270,7 +1408,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -1341,10 +1479,85 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _aTK: 0
-  _sPD: 0
-  _hP: 0
-  _FlavorText: 
+  _aTK: 4
+  _sPD: 5
+  _hP: 1
+  _flavorText: "\u3053\u3069\u3082\n\u3053\u3069\u3082\n\u3053\u3069\u3082"
+--- !u!114 &1524344684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1524344678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 252334483}
+          m_MethodName: TextMethod
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 1524344678}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!1 &1639881674
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1639881675}
+  - component: {fileID: 1639881676}
+  m_Layer: 0
+  m_Name: GameSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &1639881675
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639881674}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 203705501}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1639881676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1639881674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8797c08888966244fbe3580f2bfed870, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_playerData: {fileID: 0}
+  m_playerPrefab: {fileID: 0}
+  m_playerId: 0
+  m_gameSpeed: 0
 --- !u!1 &2040793800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,7 +1608,7 @@ MonoBehaviour:
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
-  m_ForceModuleActive: 0
+  m_ForceModuleActive: 1
 --- !u!114 &2040793803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,6 +1637,7 @@ GameObject:
   - component: {fileID: 2044655332}
   - component: {fileID: 2044655331}
   - component: {fileID: 2044655334}
+  - component: {fileID: 2044655335}
   m_Layer: 5
   m_Name: SantaButton
   m_TagString: Untagged
@@ -1471,9 +1685,9 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0, a: 1}
+    m_PressedColor: {r: 0.9811321, g: 0.9811321, b: 0.9811321, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
@@ -1542,10 +1756,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8ccb175457a12e847b4e5b3d37b9ba19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _aTK: 0
-  _sPD: 0
-  _hP: 0
-  _FlavorText: 
+  _aTK: 5
+  _sPD: 4
+  _hP: 1
+  _flavorText: "\u30B5\u30F3\u30BF\n\u3055\u3093\n\u3060\u304A"
+--- !u!114 &2044655335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044655329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 252334483}
+          m_MethodName: TextMethod
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 2044655329}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &2112098327
 GameObject:
   m_ObjectHideFlags: 0
