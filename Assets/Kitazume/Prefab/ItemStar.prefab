@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 6371767839355559853}
   - component: {fileID: 6371767839355559842}
   - component: {fileID: 2279553140293692153}
+  - component: {fileID: -8222684181294549685}
+  - component: {fileID: -3111920480471915003}
   m_Layer: 0
   m_Name: ItemStar
   m_TagString: Untagged
@@ -145,3 +147,29 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerTag: 
   ID: 0
+--- !u!114 &-8222684181294549685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371767839355559854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f047ba88c5309ce488574a1c002c88f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftBound: -15
+--- !u!114 &-3111920480471915003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6371767839355559854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111d2a511bb843349a710e9f48459339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10

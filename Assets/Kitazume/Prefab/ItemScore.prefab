@@ -12,8 +12,10 @@ GameObject:
   - component: {fileID: 6855174883938510888}
   - component: {fileID: 6855174883938510890}
   - component: {fileID: 6855174883938510891}
+  - component: {fileID: 1437747255543421449}
+  - component: {fileID: 1298002211146575391}
   m_Layer: 0
-  m_Name: Item
+  m_Name: ItemScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,3 +125,29 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 12.8, y: 7.2}
   m_EdgeRadius: 0
+--- !u!114 &1437747255543421449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855174883938510895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f047ba88c5309ce488574a1c002c88f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftBound: -15
+--- !u!114 &1298002211146575391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6855174883938510895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 111d2a511bb843349a710e9f48459339, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 10
