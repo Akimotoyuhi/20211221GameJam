@@ -3,15 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy_Test : MonoBehaviour
-{
-    [SerializeField]
-    float _hp = 10;//ブラックサンタの体力
-    [SerializeField] 
-    string _snowTag;//雪のタグ
-    [SerializeField]
-    float _HpPlayer = 10;//プレイヤーのHP
-    [SerializeField]
-    string _PlayerTag;//プレイヤーのタグ
+{    
+    [Header("ブラックサンタの体力")][SerializeField] float _hp = 10;
+    [Header("雪のタグ")][SerializeField]string _snowTag;
+    [Header("プレイヤーのHP")][SerializeField]float _HpPlayer = 10;
+    [Header("プレイヤーのタグ")] [SerializeField]string _PlayerTag;
 
     public float HP
     {
@@ -20,7 +16,6 @@ public class Enemy_Test : MonoBehaviour
             return _hp;
         }
     }
-
     public float DamegePlayer
     {
         get
@@ -28,13 +23,11 @@ public class Enemy_Test : MonoBehaviour
             return _HpPlayer;
         }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == _snowTag)
         {
             Debug.Log("当たった");
-            //Destroy(gameObject);
             Destroy(collision.gameObject);
             _hp--;
         }
