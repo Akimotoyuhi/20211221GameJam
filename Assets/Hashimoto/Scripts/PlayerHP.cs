@@ -8,25 +8,16 @@ public class PlayerHP : MonoBehaviour
     int _PlayerHP = 10;
 
     [SerializeField]
-    string _EnemyTag;
+    string _SnowBallTag;
 
-    //public float PlayerHp
-    //{
-    //    get
-    //    {
-    //        return _PlayerHP;
-    //    }
-    //}
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == _EnemyTag)
+        SnowBall YukiObj = collision.GetComponent<SnowBall>();
+        if (YukiObj && YukiObj.Type == TargetType.Player)
         {
-            _PlayerHP--;
 
-            if (_PlayerHP <= 0)
-            {
-                Destroy(gameObject);
-            }
+            _PlayerHP -= YukiObj.Damage;
         }
     }
 }
