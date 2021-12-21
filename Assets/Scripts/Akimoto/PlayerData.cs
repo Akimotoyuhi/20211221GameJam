@@ -2,17 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerData : MonoBehaviour
+[CreateAssetMenu]
+public class PlayerData : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public List<PlayerDataBase> m_playerDataBases = new List<PlayerDataBase>();
+}
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+[System.Serializable]
+public class PlayerDataBase
+{
+    [SerializeField] Sprite m_image;
+    [SerializeField] int m_life;
+    [SerializeField] int m_power;
+    public Sprite Image => m_image;
+    public int Life => m_life;
+    public int Power => m_power;
 }
