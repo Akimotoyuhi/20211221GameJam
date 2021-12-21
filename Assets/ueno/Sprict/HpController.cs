@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class HpController : MonoBehaviour
+public class ScoreManager : MonoBehaviour
 {
     /// <summary> Playerの体力 </summary>
     [SerializeField] float maxHp = 5f;
