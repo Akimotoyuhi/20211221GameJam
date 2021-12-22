@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
     {
         m_rb = GetComponent<Rigidbody2D>();
         _hpController = GameObject.FindObjectOfType<HpController>();
-        _anim.SetBool("isGrounded" ,!m_isJump);
+        
         
     }
 
@@ -36,6 +36,7 @@ public class Player : MonoBehaviour
         }
         _hpController.UpdateSlider(m_life);
         _time += Time.deltaTime;
+        _anim.SetBool("isGrounded", !m_isJump);
     }
 
     private void Jump()
@@ -59,7 +60,7 @@ public class Player : MonoBehaviour
         SnowBall s = obj.GetComponent<SnowBall>();
         s.Damage = m_power;
         s.Type = TargetType.Enemy;
-        //_anim.SetTrigger("attackTrigger");
+        _anim.SetTrigger("attackTrigger");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
