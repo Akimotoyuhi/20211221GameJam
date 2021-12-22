@@ -26,7 +26,7 @@ public class Enemy_Capsule : MonoBehaviour
             if (_hp <= 0)
             {
                 Destroy(gameObject);
-                GameManager.Instance._enemyCount++;
+                GameManager.Instance.EnemyCount++;
             }
             
         }

@@ -21,12 +21,12 @@ public class DistanceScoreManager : MonoBehaviour
 
     void Update()
     {
-        _distance = (int)GameManager.Instance.m_mileage;
-        _enemy = GameManager.Instance._enemyCount;
-        _score = (int)GameManager.Instance._allScore;
+        _distance = (int)GameManager.Instance.Mileage;
+        _enemy = GameManager.Instance.EnemyCount;
+        _score = (int)GameManager.Instance.AllScore;
         _distanseText.text = "走った距離" + _distance.ToString("D8") + "M";
         _enemyText.text = "ブラックサンタ" + _enemy.ToString("D4") + "体";
-        _prezentText.text = "Score" + _score.ToString("D4");
+        _prezentText.text = "Score" + _score.ToString("D8");
 
         if (!live)
         {

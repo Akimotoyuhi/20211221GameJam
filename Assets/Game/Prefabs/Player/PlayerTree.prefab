@@ -1156,8 +1156,8 @@ GameObject:
   - component: {fileID: 7752997523743033016}
   - component: {fileID: 7752997523743033017}
   - component: {fileID: 7752997523743033015}
-  - component: {fileID: 7752997523743033012}
   - component: {fileID: 7752997523743033014}
+  - component: {fileID: 5413200162190271072}
   m_Layer: 0
   m_Name: PlayerTree
   m_TagString: Player
@@ -1251,22 +1251,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!58 &7752997523743033012
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7752997523743033013}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 0.1
 --- !u!114 &7752997523743033014
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1282,6 +1266,33 @@ MonoBehaviour:
   m_snowBall: {fileID: 3516225898559936746, guid: 68a8db44634fe034ba5f7a2811e4a1b1,
     type: 3}
   m_life: 0
+  _anim: {fileID: 4788460380959516941}
+--- !u!61 &5413200162190271072
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7752997523743033013}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0.06}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.4, y: 0.7}
+  m_EdgeRadius: 0
 --- !u!1 &8255358855301453149
 GameObject:
   m_ObjectHideFlags: 0
