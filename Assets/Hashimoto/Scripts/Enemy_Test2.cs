@@ -8,6 +8,7 @@ public class Enemy_Test2 : MonoBehaviour
     void Start()
     {
         Enemy_Capsule gameObject = this.GetComponent<Enemy_Capsule>();
-        float EnemyHp = gameObject.HP;
+        float EnemyHp = gameObject.EnemyHP;
+        
     }
 }
