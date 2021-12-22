@@ -20,28 +20,36 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-        {
-            Jump();
-        }
-        m_fireTimer = Time.deltaTime;
+        Jump();
+        m_fireTimer += Time.deltaTime;
         if (Input.GetButtonDown("Fire1") && m_fireTimer > m_fireInterval)
         {
+            m_fireTimer = 0;
             Fire();
         }
     }
 
     private void Jump()
     {
-        if (m_isJump) return;
-        m_rb.velocity = Vector2.up * m_jumpPower;
+        Vector2 velocity = m_rb.velocity;
+        if (Input.GetButtonDown("Jump") && !m_isJump)
+        {
+            velocity.y = m_jumpPower;
+        }
+        else if (!Input.GetButton("Jump") && velocity.y > 0)
+        {
+            velocity.y = 0;
+        }
+        m_rb.velocity = velocity;
     }
 
     private void Fire()
     {
-        m_fireTimer = 0;
         GameObject obj = Instantiate(m_snowBall, transform.position, Quaternion.identity);
         obj.GetComponent<Rigidbody2D>().velocity = Vector2.right * 10f;
+        SnowBall s = obj.GetComponent<SnowBall>();
+        s.Damage = m_power;
+        s.Type = TargetType.Enemy;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -49,6 +57,16 @@ public class Player : MonoBehaviour
         if (collision.gameObject.name == "Ground")
         {
             m_isJump = false;
+        }
+
+        SnowBall blt = collision.gameObject.GetComponent<SnowBall>();
+        if (blt && blt.Type == TargetType.Player)
+        {
+            m_life -= blt.Damage;
+            if (m_life < 0)
+            {
+                Destroy(gameObject);
+            }
         }
     }
 
@@ -69,6 +87,19 @@ public class Player : MonoBehaviour
         m_jumpPower = data.JumpPower;
     }
 
+    /// <summary>
+    /// 被ダメージ処理
+    /// </summary>
+    /// <param name="damage"></param>
+    public void Damage(int damage)
+    {
+        m_life -= damage;
+        if (m_life < 0)
+        {
+            Debug.Log("～死～");
+        }
+    }
+
     public void GetItem(int id)
     {
         switch (id)
@@ -77,7 +108,7 @@ public class Player : MonoBehaviour
                 GameManager.Instance.GetSpeedupItem();
                 break;
             case 1:
-                GameManager.Instance.GetScoreItem();
+                GameManager.Instance.GetScore(100);
                 break;
             default:
                 break;

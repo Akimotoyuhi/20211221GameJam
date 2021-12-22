@@ -415,6 +415,11 @@ PrefabInstance:
       propertyPath: m_starTimeLimit
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 309851492411773814, guid: f051701e5ad6957439294a0bd8c3ef8e,
+        type: 3}
+      propertyPath: m_playerSpawnPos
+      value: 
+      objectReference: {fileID: 573884769}
     - target: {fileID: 309851492411773815, guid: f051701e5ad6957439294a0bd8c3ef8e,
         type: 3}
       propertyPath: m_Name

@@ -20,11 +20,13 @@ public class GameManager : MonoBehaviour
     /// <summary>ゲームのデフォルトの進行速度</summary>
     [SerializeField] float m_defGameSpeed = 0f;
     /// <summary>無敵アイテムの効果時間</summary>
-    [SerializeField] float m_starTimeLimit = 0f;
+    [SerializeField] float m_mutekiTimeLimit = 0f;
     /// <summary>ゲームの進行速度</summary>
     private float m_gameSpeed = 0f;
     /// <summary>無敵アイテムの時間のタイマー</summary>
     private float m_starTimer = 0f;
+    /// <summary>走行距離</summary>
+    private float m_mileage = 0f;
     /// <summary>速度上昇アイテムの効果時間中</summary>
     private bool m_isSpeedUp = false;
     /// <summary>ゲーム中フラグ</summary>
@@ -51,17 +53,22 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// ゲーム開始
+    /// </summary>
     private void GameStart()
     {
+        Setup();
         if (m_playerPrefab)
         {
-            GameObject obj = Instantiate(m_playerPrefab, Vector2.zero, Quaternion.identity);
+            GameObject obj = Instantiate(m_playerPrefab, m_playerSpawnPos.position, Quaternion.identity);
             obj.GetComponent<Player>().Setup(m_playerData.m_playerDataBases[m_playerId]);
         }
         else
         {
             Debug.LogWarning("Player is Null");
         }
+        m_defGameSpeed = m_playerData.m_playerDataBases[m_playerId].Speed;
         m_gameSpeed = m_defGameSpeed;
     }
 
@@ -71,7 +78,7 @@ public class GameManager : MonoBehaviour
         if (m_isSpeedUp)
         {
             m_starTimer += Time.deltaTime;
-            if (m_starTimer > m_starTimeLimit)
+            if (m_starTimer > m_mutekiTimeLimit)
             {
                 m_starTimer = 0;
                 m_isSpeedUp = false;
@@ -80,14 +87,39 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void GetScoreItem()
+    /// <summary>
+    /// 初期化処理
+    /// </summary>
+    private void Setup()
     {
-        Score += 100;
+        Score = 0;
     }
 
-    public void GetSpeedupItem()
+    /// <summary>
+    /// ゲーム終了
+    /// </summary>
+    private void GameFinish()
     {
+        //リザルトシーンに移行
+    }
+
+    public void GetScore(int score)
+    {
+        Score += score;
+    }
+
+    public IEnumerator GetSpeedupItem()
+    {
+        if (m_isSpeedUp) yield return null;
         m_gameSpeed *= 10;
         m_isSpeedUp = true;
+        float timer = 0;
+        while (timer > m_mutekiTimeLimit)
+        {
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        m_gameSpeed = m_defGameSpeed;
+        m_isSpeedUp = false;
     }
 }
