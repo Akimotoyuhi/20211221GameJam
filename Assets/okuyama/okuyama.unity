@@ -427,7 +427,7 @@ PrefabInstance:
     - target: {fileID: -1425135423858599803, guid: 08eb6838ce0526243af25d227ec4d5e7,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -116884764822531540, guid: 08eb6838ce0526243af25d227ec4d5e7,
         type: 3}
@@ -595,6 +595,8 @@ MonoBehaviour:
   - {fileID: 6855174883938510895, guid: 289be646419e66e4f831b118b2cd3928, type: 3}
   spawnDelay: 2
   spawnInterval: 1.5
+  maxY: 0
+  minY: 0
 --- !u!4 &1983992962
 Transform:
   m_ObjectHideFlags: 0

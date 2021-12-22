@@ -18,7 +18,7 @@ public class MoveX : MonoBehaviour
     { 
         transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
 
-        if (transform.position.x < leftBound && !gameObject.CompareTag("Background"))
+        if (transform.position.x < leftBound)
         {
             Destroy(gameObject);
         }
