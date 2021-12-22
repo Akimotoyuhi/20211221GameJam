@@ -12,7 +12,7 @@ public class BackGround : MonoBehaviour
     void Start()
     {
         startPos = transform.position;
-        repeatWidth = GetComponent<BoxCollider2D>().size.x*2;
+        repeatWidth = GetComponent<BoxCollider2D>().size.x/2;
     }
 
     /// <summary>背景の繰り返し</summary>
