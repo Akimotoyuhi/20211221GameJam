@@ -874,6 +874,16 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 309851492411773814, guid: 8d88a186d974253419f7c9c040994066,
         type: 3}
+      propertyPath: m_playerId
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 309851492411773814, guid: 8d88a186d974253419f7c9c040994066,
+        type: 3}
+      propertyPath: _isStartGame
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 309851492411773814, guid: 8d88a186d974253419f7c9c040994066,
+        type: 3}
       propertyPath: m_playerSpawnPos
       value: 
       objectReference: {fileID: 160097501}
