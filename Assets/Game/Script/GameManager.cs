@@ -12,7 +12,7 @@ public class GameManager : MonoBehaviour
     [Space]
     [SerializeField] PlayerData m_playerData = null;
     /// <summary>プレイヤーのプレハブ</summary>
-    [SerializeField] GameObject m_playerPrefab = null;
+    [SerializeField] GameObject[] m_playerPrefab = null;
     /// <summary>プレイヤーの生成位置</summary>
     [SerializeField] Transform m_playerSpawnPos = null;
     /// <summary>生成するプレイヤーのデータID</summary>
@@ -68,9 +68,9 @@ public class GameManager : MonoBehaviour
     private void GameStart()
     {
         Setup();
-        if (m_playerPrefab)
+        if (m_playerPrefab[m_playerId])
         {
-            GameObject obj = Instantiate(m_playerPrefab, m_playerSpawnPos.position, Quaternion.identity);
+            GameObject obj = Instantiate(m_playerPrefab[m_playerId], m_playerSpawnPos.position, Quaternion.identity);
             obj.GetComponent<Player>().Setup(m_playerData.m_playerDataBases[m_playerId]);
         }
         else

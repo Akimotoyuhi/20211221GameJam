@@ -19,15 +19,15 @@ public class ResultManager : MonoBehaviour
 
     void Start()
     {
-        _enemy = GameManager.Instance.Score;
+        _enemy = GameManager.Instance._enemyCount;
 
-        //_distance = GameManager.Instance. m_mileage;
+        _distance = (int)GameManager.Instance. m_mileage;
 
-        _totalscore = _enemy * _distance;
+        _totalscore = (int)GameManager.Instance._allScore;
 
         _distanseText.text = "走った距離" + _distance.ToString("D8") + "M";
         _enemyText.text = "ブラックサンタ" + _enemy.ToString("D4") + "体";
 
-        _totalText.text = "トータルスコア" + _distance * _enemy + _totalscore.ToString("D10");
+        _totalText.text = "トータルスコア" + _totalscore.ToString("D10");
     }
 }
