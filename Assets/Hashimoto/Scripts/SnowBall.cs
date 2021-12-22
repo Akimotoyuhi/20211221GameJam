@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SnowBall : MonoBehaviour
 {
-
     public int Damage
     {
         get;
@@ -20,5 +19,4 @@ public enum TargetType
 {
     Player,
     Enemy
-
 }
