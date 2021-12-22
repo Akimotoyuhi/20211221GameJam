@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveX : MonoBehaviour
+public class BrackSantMove : MonoBehaviour
 {
-    /// <summary>アイテムと背景のスピード</summary>
     float speed = 10;
     void Start()
     {
@@ -13,7 +12,7 @@ public class MoveX : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    { 
-        transform.Translate(Vector3.left * speed * Time.deltaTime, Space.World);
+    {
+        transform.Translate(Vector3.left * speed/2 * Time.deltaTime, Space.World);
     }
 }
