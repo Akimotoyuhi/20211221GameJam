@@ -17,6 +17,8 @@ public class DistanceScoreManager : MonoBehaviour
     {
         gameManager = GetComponent<GameManager>();
         live = true;
+
+        
     }
 
     void Update()
