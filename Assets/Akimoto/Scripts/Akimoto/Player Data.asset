@@ -13,15 +13,39 @@ MonoBehaviour:
   m_Name: Player Data
   m_EditorClassIdentifier: 
   m_playerDataBases:
-  - m_name: "\u4E09\u629E\u30ED\u30FC\u30B9"
+  - m_name: "\u30B5\u30F3\u30BF\u3055\u3093"
+    m_image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    m_life: 5
+    m_power: 5
+    m_fireInterval: 0
+    m_speed: 4
+  - m_name: "\u3053\u3069\u3082"
+    m_image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    m_life: 4
+    m_power: 4
+    m_fireInterval: 0
+    m_speed: 5
+  - m_name: "\u30C8\u30CA\u30AB\u30A4"
+    m_image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    m_life: 7
+    m_power: 3
+    m_fireInterval: 0
+    m_speed: 7
+  - m_name: "\u96EA\u3060\u308B\u307E"
+    m_image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+    m_life: 3
+    m_power: 10
+    m_fireInterval: 0
+    m_speed: 1
+  - m_name: "\u30AF\u30EA\u30B9\u30DE\u30B9\u30C4\u30EA\u30FC"
     m_image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
     m_life: 10
-    m_power: 5
-  - m_name: "\u3068\u30CA\u30AB\u30A4"
-    m_image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    m_life: 20
     m_power: 2
-  - m_name: "\u30AC\u30AD"
+    m_fireInterval: 0
+    m_speed: 10
+  - m_name: "\u539F\u7530\u30E9\u30D5\u30A1\u30A8\u30EB\u30A8\u30A4\u30B8"
     m_image: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
-    m_life: 30
-    m_power: 1
+    m_life: 1
+    m_power: 5
+    m_fireInterval: 0
+    m_speed: 5

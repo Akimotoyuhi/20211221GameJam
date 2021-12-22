@@ -5,7 +5,7 @@ using UnityEngine;
 public class MoveX : MonoBehaviour
 {
     /// <summary>アイテムと背景のスピード</summary>
-    float speed;
+    float speed = 5;
     void Start()
     {
         speed = GameManager.Instance.Speed;

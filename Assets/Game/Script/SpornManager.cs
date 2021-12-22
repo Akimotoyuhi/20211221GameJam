@@ -10,9 +10,9 @@ public class SpornManager : MonoBehaviour
     /// <summary>アイテム生成のインターバル</summary>
     [SerializeField] float spawnInterval = 1.5f;
     /// <summary>アイテム生成のMaxY軸</summary>
-    [SerializeField] float maxY;
+    [SerializeField] Transform maxY;
     /// <summary>アイテム生成のMinY軸</summary>
-    [SerializeField] float minY;
+    [SerializeField] Transform minY;
 
     void Start()
     {
@@ -22,7 +22,7 @@ public class SpornManager : MonoBehaviour
     // Spawn obstacles
     void SpawnObjects()
     {
-        Vector3 spawnLocation = new Vector2(14f, Random.Range(maxY, minY));
+        Vector3 spawnLocation = new Vector2(maxY.position.x, Random.Range(maxY.position.y, minY.position.y));
         int index = Random.Range(0, itemPrefabs.Length);
         Instantiate(itemPrefabs[index], spawnLocation, itemPrefabs[index].transform.rotation);
     }

@@ -5,17 +5,21 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] GameObject m_snowBall;
-    private float m_fireInterval = 1f;
+    private float m_fireInterval = 0.2f;
     private float m_fireTimer = 0f;
-    private int m_life = 0;
+    public int m_life = 0;
     private int m_power = 0;
     private bool m_isJump = false;
     private Rigidbody2D m_rb = null;
-    private float m_jumpPower = 0;
+    private float m_jumpPower = 15;
+    HpController _hpController;
+    float _time;
+    float _lastTime;
 
     void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
+        _hpController = GameObject.FindObjectOfType<HpController>();
     }
 
     void Update()
@@ -24,9 +28,13 @@ public class Player : MonoBehaviour
         m_fireTimer += Time.deltaTime;
         if (Input.GetButtonDown("Fire1") && m_fireTimer > m_fireInterval)
         {
+            print(m_fireTimer);
             m_fireTimer = 0;
             Fire();
         }
+        _hpController.UpdateSlider(m_life);
+        _time += Time.deltaTime;
+        print(m_isJump);
     }
 
     private void Jump()
@@ -58,16 +66,6 @@ public class Player : MonoBehaviour
         {
             m_isJump = false;
         }
-
-        SnowBall blt = collision.gameObject.GetComponent<SnowBall>();
-        if (blt && blt.Type == TargetType.Player)
-        {
-            m_life -= blt.Damage;
-            if (m_life < 0)
-            {
-                Destroy(gameObject);
-            }
-        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -78,13 +76,21 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        SnowBall blt = collision.gameObject.GetComponent<SnowBall>();
+        if (blt && blt.Type == TargetType.Player)
+        {
+            Damage(blt.Damage);
+        }
+
+        
+    }
+
     public void Setup(PlayerDataBase data)
     {
-        GetComponent<SpriteRenderer>().sprite = data.Image;
         m_life = data.Life;
         m_power = data.Power;
-        m_fireInterval = data.FireInterval;
-        m_jumpPower = data.JumpPower;
     }
 
     /// <summary>
@@ -94,9 +100,11 @@ public class Player : MonoBehaviour
     public void Damage(int damage)
     {
         m_life -= damage;
-        if (m_life < 0)
+        if (m_life <= 0)
         {
-            Debug.Log("～死～");
+            _hpController.UpdateSlider(m_life);
+            _lastTime = _time;
+            Destroy(gameObject);
         }
     }
 
