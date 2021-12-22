@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     /// <summary>プレイヤーの生成位置</summary>
     [SerializeField] Transform m_playerSpawnPos = null;
     /// <summary>生成するプレイヤーのデータID</summary>
-    [SerializeField] int m_playerId = 0;
+    [SerializeField] static int m_playerId = 0;
     /// <summary>ゲームのデフォルトの進行速度</summary>
     [SerializeField] float m_defGameSpeed = 1f;
     /// <summary>無敵アイテムの効果時間</summary>
@@ -26,23 +26,29 @@ public class GameManager : MonoBehaviour
     /// <summary>無敵アイテムの時間のタイマー</summary>
     private float m_starTimer = 0f;
     /// <summary>走行距離</summary>
-    public float m_mileage = 0;
-    public int _enemyCount;
-    public float _allScore;
+    static public float m_mileage = 0;
+    static public int _enemyCount;
+    static public float _allScore;
     /// <summary>速度上昇アイテムの効果時間中</summary>
     private bool m_isSpeedUp = false;
     /// <summary>ゲーム中フラグ</summary>
-    private bool m_isGame = false;
+    public bool m_isGame = false;
     /// <summary>ゲーム進行速度</summary>
     public float Speed => m_gameSpeed;
     /// <summary>プレイヤーIDの設定</summary>
-    public int PlayerId { set => m_playerId = value; }
+    public int PlayerId { get => m_playerId; set => m_playerId = value; }
+    public float Mileage { get => m_mileage; set => m_mileage = value; }
+    public int EnemyCount { get => _enemyCount; set => _enemyCount = value; }
+    public float AllScore { get => _allScore; set => _allScore = value; }
+
     /// <summary>現在スコア</summary>
     public int Score { get; private set; }
     /// <summary>GameManagerのインスタンス</summary>
     public static GameManager Instance { get; private set; }
 
     [SerializeField]bool _isStartGame;
+
+    [SerializeField]Scenemanager scenemanager;
 
     private void Awake()
     {
@@ -59,6 +65,8 @@ public class GameManager : MonoBehaviour
         if(_isStartGame)
         {
             _allScore = 0;
+            _enemyCount = 0;
+            m_mileage = 0;
         }
     }
 
@@ -68,9 +76,9 @@ public class GameManager : MonoBehaviour
     private void GameStart()
     {
         Setup();
-        if (m_playerPrefab[m_playerId])
+        if (m_playerPrefab[PlayerId])
         {
-            GameObject obj = Instantiate(m_playerPrefab[m_playerId], m_playerSpawnPos.position, Quaternion.identity);
+            GameObject obj = Instantiate(m_playerPrefab[PlayerId], m_playerSpawnPos.position, Quaternion.identity);
             obj.GetComponent<Player>().Setup(m_playerData.m_playerDataBases[m_playerId]);
         }
         else
@@ -83,7 +91,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if (!m_isGame) return;
+        GameFinish();
+        if (!m_isGame || !_isStartGame) return;
         if (m_isSpeedUp)
         {
             m_starTimer += Time.deltaTime;
@@ -94,15 +103,14 @@ public class GameManager : MonoBehaviour
                 m_gameSpeed = m_defGameSpeed;
             }
         }
-
-        m_mileage += Time.deltaTime * Speed;
+        Mileage += Time.deltaTime * Speed;
 
         ScoreCount();
     }
 
     void ScoreCount()
     {
-        _allScore = m_mileage + _enemyCount * 10 + Score;
+        AllScore = Mileage + EnemyCount * 10 + Score;
     }
 
     /// <summary>
@@ -118,7 +126,10 @@ public class GameManager : MonoBehaviour
     /// </summary>
     private void GameFinish()
     {
-        //リザルトシーンに移行
+        if(!m_isGame && _isStartGame)
+        {
+            scenemanager.StartFadeOut("Result");
+        }
     }
 
     public void GetScore(int score)

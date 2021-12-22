@@ -15,11 +15,14 @@ public class Player : MonoBehaviour
     HpController _hpController;
     float _time;
     float _lastTime;
+    [SerializeField] Animator _anim;
 
     void Start()
     {
         m_rb = GetComponent<Rigidbody2D>();
         _hpController = GameObject.FindObjectOfType<HpController>();
+        _anim.SetBool("isGrounded" ,!m_isJump);
+        
     }
 
     void Update()
@@ -28,13 +31,11 @@ public class Player : MonoBehaviour
         m_fireTimer += Time.deltaTime;
         if (Input.GetButtonDown("Fire1") && m_fireTimer > m_fireInterval)
         {
-            print(m_fireTimer);
             m_fireTimer = 0;
             Fire();
         }
         _hpController.UpdateSlider(m_life);
         _time += Time.deltaTime;
-        print(m_isJump);
     }
 
     private void Jump()
@@ -44,7 +45,7 @@ public class Player : MonoBehaviour
         {
             velocity.y = m_jumpPower;
         }
-        else if (!Input.GetButton("Jump") && velocity.y > 0)
+        else if (!Input.GetButton("Jump") && velocity.y > -1)
         {
             velocity.y = -m_jumpPower;
         }
@@ -58,6 +59,7 @@ public class Player : MonoBehaviour
         SnowBall s = obj.GetComponent<SnowBall>();
         s.Damage = m_power;
         s.Type = TargetType.Enemy;
+        //_anim.SetTrigger("attackTrigger");
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -83,8 +85,6 @@ public class Player : MonoBehaviour
         {
             Damage(blt.Damage);
         }
-
-        
     }
 
     public void Setup(PlayerDataBase data)
@@ -100,10 +100,12 @@ public class Player : MonoBehaviour
     public void Damage(int damage)
     {
         m_life -= damage;
+        _anim.SetTrigger("damageTrigger");
         if (m_life <= 0)
         {
             _hpController.UpdateSlider(m_life);
             _lastTime = _time;
+            GameManager.Instance.m_isGame = false;
             Destroy(gameObject);
         }
     }
