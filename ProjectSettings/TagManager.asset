@@ -4,9 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Yukidama
-  - Enemy
   - SnowBall
+  - Enemy
+  - Ground
   layers:
   - Default
   - TransparentFX
