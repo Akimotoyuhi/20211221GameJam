@@ -16,19 +16,19 @@ public class Enemy_Capsule : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        print(_hp);
-    }
-
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         SnowBall YukiObj = collision.GetComponent<SnowBall>();
         if (YukiObj && YukiObj.Type == TargetType.Enemy)
         {
-            print("a");
             _hp -= YukiObj.Damage;
+            Destroy(collision.gameObject);
+            if (_hp <= 0)
+            {
+                Destroy(gameObject);
+                GameManager.Instance._enemyCount++;
+            }
+            
         }
     }
     #endregion

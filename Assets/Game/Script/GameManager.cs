@@ -18,15 +18,17 @@ public class GameManager : MonoBehaviour
     /// <summary>生成するプレイヤーのデータID</summary>
     [SerializeField] int m_playerId = 0;
     /// <summary>ゲームのデフォルトの進行速度</summary>
-    [SerializeField] float m_defGameSpeed = 0f;
+    [SerializeField] float m_defGameSpeed = 1f;
     /// <summary>無敵アイテムの効果時間</summary>
-    [SerializeField] float m_mutekiTimeLimit = 0f;
+    [SerializeField] float m_mutekiTimeLimit = 2f;
     /// <summary>ゲームの進行速度</summary>
     private float m_gameSpeed = 0f;
     /// <summary>無敵アイテムの時間のタイマー</summary>
     private float m_starTimer = 0f;
     /// <summary>走行距離</summary>
-    private float m_mileage = 0f;
+    public float m_mileage = 0;
+    public int _enemyCount;
+    public float _allScore;
     /// <summary>速度上昇アイテムの効果時間中</summary>
     private bool m_isSpeedUp = false;
     /// <summary>ゲーム中フラグ</summary>
@@ -40,6 +42,8 @@ public class GameManager : MonoBehaviour
     /// <summary>GameManagerのインスタンス</summary>
     public static GameManager Instance { get; private set; }
 
+    [SerializeField]bool _isStartGame;
+
     private void Awake()
     {
         Instance = this;
@@ -50,6 +54,11 @@ public class GameManager : MonoBehaviour
         if (!m_debugMode)
         {
             GameStart();
+        }
+        m_isGame = true;
+        if(_isStartGame)
+        {
+            _allScore = 0;
         }
     }
 
@@ -85,6 +94,15 @@ public class GameManager : MonoBehaviour
                 m_gameSpeed = m_defGameSpeed;
             }
         }
+
+        m_mileage += Time.deltaTime * Speed;
+
+        ScoreCount();
+    }
+
+    void ScoreCount()
+    {
+        _allScore = m_mileage + _enemyCount * 10 + Score;
     }
 
     /// <summary>
@@ -106,20 +124,24 @@ public class GameManager : MonoBehaviour
     public void GetScore(int score)
     {
         Score += score;
+        print("a");
     }
 
-    public IEnumerator GetSpeedupItem()
+    public void GetSpeedupItem()
     {
-        if (m_isSpeedUp) yield return null;
+        //if (m_isSpeedUp) return;
         m_gameSpeed *= 10;
         m_isSpeedUp = true;
-        float timer = 0;
-        while (timer > m_mutekiTimeLimit)
-        {
-            timer += Time.deltaTime;
-            yield return null;
-        }
-        m_gameSpeed = m_defGameSpeed;
-        m_isSpeedUp = false;
+        m_starTimer = 0;
     }
+}
+
+public enum PlayerID
+{
+    Santa,
+    Girl,
+    Tonakai,
+    SnowMan,
+    Tree,
+    Harada
 }

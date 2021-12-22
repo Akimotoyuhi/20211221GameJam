@@ -15,7 +15,6 @@ public class EnemyCannon : MonoBehaviour
         Transform mballPos = muzzlePoint.transform;
         GameObject newSnowBall = Instantiate(ball, mballPos.position,Quaternion.identity);
         Vector2 dir = Vector2.right * -1;
-        Debug.Log(dir);
         newSnowBall.GetComponent<Rigidbody2D>().velocity = dir * speed;
         SnowBall Yuki = newSnowBall.GetComponent<SnowBall>();
         Yuki.Type = TargetType.Player;

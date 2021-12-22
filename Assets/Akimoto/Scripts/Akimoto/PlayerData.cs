@@ -23,5 +23,5 @@ public class PlayerDataBase
     public int Power => m_power;
     public float FireInterval => m_fireInterval;
     public float Speed => m_speed;
-    public float JumpPower { get; } = 10;
+    public float JumpPower { get; } = 15;
 }
