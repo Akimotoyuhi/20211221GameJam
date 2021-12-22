@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class BrackSantMove : MonoBehaviour
 {
-    float speed = 10;
+    float speed;
     void Start()
     {
-        //speed = GameManager.Instance.Speed;
+        speed = GameManager.Instance.Speed;
     }
 
     // Update is called once per frame

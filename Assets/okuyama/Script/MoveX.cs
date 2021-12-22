@@ -5,10 +5,10 @@ using UnityEngine;
 public class MoveX : MonoBehaviour
 {
     /// <summary>アイテムと背景のスピード</summary>
-    float speed = 10;
+    float speed;
     void Start()
     {
-        //speed = GameManager.Instance.Speed;
+        speed = GameManager.Instance.Speed;
     }
 
     // Update is called once per frame
