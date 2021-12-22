@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec0ae67827a218a4ebd3947165bfd4ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _fadeImage: {fileID: 0}
+  _fadeImage: {fileID: 1854591026}
 --- !u!114 &201542674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58b252b132b2b9f4d9262b329dfa3287, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _sceneManager: {fileID: 201542673}
+  _sceneManager: {fileID: 0}
   _image: {fileID: 1854591026}
 --- !u!1 &524161170
 GameObject:
@@ -357,7 +357,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -432}
+  m_AnchoredPosition: {x: 640, y: -440}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &592445453
@@ -988,7 +988,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -210}
+  m_AnchoredPosition: {x: -640, y: -440}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1913154976
@@ -1107,7 +1107,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 6}
+  m_AnchoredPosition: {x: 0, y: -360}
   m_SizeDelta: {x: 160, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2049404207
@@ -1152,7 +1152,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2049404208}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 201542673}
+        m_MethodName: StartFadeOut
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2049404208
 MonoBehaviour:
   m_ObjectHideFlags: 0
