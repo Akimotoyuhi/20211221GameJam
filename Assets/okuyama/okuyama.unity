@@ -247,6 +247,10 @@ MonoBehaviour:
   m_playerId: 0
   m_defGameSpeed: 0
   m_mutekiTimeLimit: 0
+  m_mileage: 0
+  _enemyCount: 0
+  _allScore: 0
+  _isStartGame: 0
 --- !u!4 &441537230
 Transform:
   m_ObjectHideFlags: 0
@@ -260,7 +264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &531823558
 PrefabInstance:
@@ -273,6 +277,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: "\u30B2\u30FC\u30E0\u30B8\u30E3\u30E0\u3000\u30B5\u30F3\u30BF"
+      objectReference: {fileID: 0}
+    - target: {fileID: -3939213058107444720, guid: b7560d4d88d7c3044bdeedf565fc00c1,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -1814571392638856263, guid: b7560d4d88d7c3044bdeedf565fc00c1,
         type: 3}
@@ -745,95 +754,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!1001 &1875816966
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -5375760832371952657, guid: 9e3309cf98e42e74baf2cc46db4c5256,
-        type: 3}
-      propertyPath: m_Name
-      value: "\u30C8\u30CA\u30AB\u30A4"
-      objectReference: {fileID: 0}
-    - target: {fileID: -5375760832371952657, guid: 9e3309cf98e42e74baf2cc46db4c5256,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.7763214
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -4.219694
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8417252216970706, guid: 9e3309cf98e42e74baf2cc46db4c5256, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 3009830477125839467, guid: 9e3309cf98e42e74baf2cc46db4c5256,
-    type: 3}
---- !u!1 &1875816967 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -5375760832371952657, guid: 9e3309cf98e42e74baf2cc46db4c5256,
-    type: 3}
-  m_PrefabInstance: {fileID: 1875816966}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1875816968
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1875816967}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 36a6c6b74eb05fc498a1e121161fbb65, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1983992960
 GameObject:
   m_ObjectHideFlags: 0
@@ -867,8 +787,8 @@ MonoBehaviour:
   - {fileID: 6855174883938510895, guid: 289be646419e66e4f831b118b2cd3928, type: 3}
   spawnDelay: 2
   spawnInterval: 1.5
-  maxY: 0
-  minY: 0
+  maxY: {fileID: 0}
+  minY: {fileID: 0}
 --- !u!4 &1983992962
 Transform:
   m_ObjectHideFlags: 0
@@ -881,7 +801,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2061587148
 PrefabInstance:
@@ -898,12 +818,12 @@ PrefabInstance:
     - target: {fileID: -5038657448141747874, guid: da053f53737442e4b87c01a947129a98,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.38240933
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -5038657448141747874, guid: da053f53737442e4b87c01a947129a98,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -9.408729
+      value: -8.9
       objectReference: {fileID: 0}
     - target: {fileID: -5038657448141747874, guid: da053f53737442e4b87c01a947129a98,
         type: 3}
@@ -1123,7 +1043,7 @@ PrefabInstance:
     - target: {fileID: 3021058049164571573, guid: da053f53737442e4b87c01a947129a98,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5681744306009089429, guid: da053f53737442e4b87c01a947129a98,
         type: 3}
