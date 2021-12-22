@@ -11,7 +11,7 @@ public class Player : MonoBehaviour
     private int m_power = 0;
     private bool m_isJump = false;
     private Rigidbody2D m_rb = null;
-    private float m_jumpPower = 15;
+    private float m_jumpPower = 10;
     HpController _hpController;
     float _time;
     float _lastTime;
@@ -46,7 +46,7 @@ public class Player : MonoBehaviour
         }
         else if (!Input.GetButton("Jump") && velocity.y > 0)
         {
-            velocity.y = 0;
+            velocity.y = -m_jumpPower;
         }
         m_rb.velocity = velocity;
     }
